@@ -52,7 +52,7 @@ fun main(){
     var Azor = Pies(2,3,4,5)
     var Kitek = Kot(1,5,4,3)
     pojedynek(Azor,Kitek)
-    var waga:Int
+    var waga:Int?
     var szybkosc:Int
     var glos:Int
     var sila:Int
