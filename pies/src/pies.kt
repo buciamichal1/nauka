@@ -76,6 +76,6 @@ fun main(){
     glos = readLine()!!.toInt()
     print("Siła:")
     sila = readLine()!!.toInt()
-    var Kiteks = Pies(waga, szybkosc, glos, sila)
+    var Kiteks = Kot(waga, szybkosc, glos, sila)
     pojedynek(Azors,Kiteks)
 }
