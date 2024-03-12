@@ -1,52 +1,40 @@
-class Pies(waga:Int, szybkosc:Int, glos:Int, sila:Int){
-    var waga = waga
-    var szybkosc = szybkosc
-    var glos = glos
-    var sila = sila
-}
-class Kot(waga:Int,szybkosc:Int,glos:Int,sila:Int){
-    var waga = waga
-    var szybkosc = szybkosc
-    var glos = glos
-    var sila = sila
-}
-fun pojedynek(Pies:Pies,Kot:Kot){
-    var Pies_p:Int = 0
-    var Kot_p:Int = 0
-    if(Pies.waga > Kot.waga){
-        Pies_p += 1
-    }
-    if(Pies.waga < Kot.waga){
-        Kot_p += 1
-    }
-    if(Pies.szybkosc > Kot.szybkosc){
-        Pies_p += 1
-    }
-    if(Pies.szybkosc < Kot.szybkosc){
-        Kot_p += 1
-    }
-    if(Pies.glos > Kot.glos){
-        Pies_p += 1
-    }
-    if(Pies.glos < Kot.glos){
-        Kot_p += 1
-    }
-    if(Pies.sila > Kot.sila){
-        Pies_p += 1
-    }
-    if(Pies.sila < Kot.sila){
-        Kot_p += 1
-    }
-    if(Pies_p > Kot_p){
-        println("Wygrał pies")
-    }
-    if(Pies_p < Kot_p){
-        println("Wygrał kot")
-    }
-    if(Pies_p == Kot_p){
-        println("Remis")
+data class Pies(var waga: Int, var szybkosc: Int, var glos: Int, var sila: Int)
+
+data class Kot(var waga: Int, var szybkosc: Int, var glos: Int, var sila: Int)
+
+fun pojedynek(pies: Pies, kot: Kot) {
+    var pies_p: Int = 0
+    var kot_p: Int = 0
+
+    if (pies.waga > kot.waga) {
+        pies_p += 1
+    } else if (pies.waga < kot.waga) {
+        kot_p += 1
     }
 
+    if (pies.szybkosc > kot.szybkosc) {
+        pies_p += 1
+    } else if (pies.szybkosc < kot.szybkosc) {
+        kot_p += 1
+    }
+
+    if (pies.glos > kot.glos) {
+        pies_p += 1
+    } else if (pies.glos < kot.glos) {
+        kot_p += 1
+    }
+
+    if (pies.sila > kot.sila) {
+        pies_p += 1
+    } else if (pies.sila < kot.sila) {
+        kot_p += 1
+    }
+
+    when {
+        pies_p > kot_p -> println("Wygrał pies")
+        pies_p < kot_p -> println("Wygrał kot")
+        else -> println("Remis")
+    }
 }
 fun main(){
     var Azor = Pies(2,3,4,5)
